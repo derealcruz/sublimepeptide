@@ -9,43 +9,87 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #0b1220;
-    color: #fff;
+    background: #ffffff;
+    color: #1a1a1a;
 }
 
+/* HEADER */
 header {
-    background: #101a33;
+    background: #ffffff;
     padding: 20px;
+    border-bottom: 1px solid #eee;
     text-align: center;
 }
 
 header h1 {
-    margin: 0;
-    color: #00c2cb;
+    color: #00aeb5;
 }
 
-.hero {
-    text-align: center;
-    padding: 60px 20px;
+/* NAVIGATION */
+nav {
+    margin-top: 10px;
 }
 
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* DROPDOWN */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background: white;
+    padding: 10px;
+    top: 25px;
+    border: 1px solid #eee;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    display: block;
+    margin: 5px 0;
+}
+
+/* SECTIONS */
 .section {
     padding: 40px 20px;
-    max-width: 1100px;
+    max-width: 1000px;
     margin: auto;
 }
 
+h2 {
+    color: #00aeb5;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    margin-top: 20px;
+}
+
+/* PRODUCTS */
 .products {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-}
-
-.card {
-    background: #162447;
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
 }
 
 .card img {
@@ -53,15 +97,11 @@ header h1 {
     border-radius: 10px;
 }
 
-.card h3 {
-    margin-top: 15px;
-    color: #00c2cb;
-}
-
+/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
-    background: #101a33;
+    border-top: 1px solid #eee;
 }
 </style>
 </head>
@@ -70,37 +110,53 @@ footer {
 
 <header>
     <h1>Sublime Peptide USA</h1>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+
+            <li>
+                <a href="#">Information</a>
+                <ul>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#shipping">Shipping & Returns</a></li>
+                    <li><a href="#packaging">Packaging</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#products">Products</a></li>
+        </ul>
+    </nav>
 </header>
 
-<section class="hero">
+<!-- HOME -->
+<section id="home" class="section">
     <h2>Premium Research Peptides</h2>
     <p>Quality • Precision • Innovation</p>
 </section>
 
-<section class="section">
+<!-- PRODUCTS -->
+<section id="products" class="section">
     <h2>Our Products</h2>
 
     <div class="products">
 
-        <!-- PRODUCT 1 -->
         <div class="card">
-            <img src="product1.jpg" alt="GHK-CU/BPC-157/TB-500">
+            <img src="product1.jpg">
             <h3>GHK-CU / BPC-157 / TB-500</h3>
             <p>50MG / 10MG / 10MG</p>
             <p>For research use only</p>
         </div>
 
-        <!-- PRODUCT 2 -->
         <div class="card">
-            <img src="product2.jpg" alt="NAD+ 500MG">
+            <img src="product2.jpg">
             <h3>NAD+ 500MG</h3>
             <p>500 mg/mL</p>
             <p>For research use only</p>
         </div>
 
-        <!-- PRODUCT 3 -->
         <div class="card">
-            <img src="product3.jpg" alt="Retatrutide 30MG">
+            <img src="product3.jpg">
             <h3>Retatrutide 30MG</h3>
             <p>30 mg/mL</p>
             <p>For research use only</p>
@@ -109,17 +165,75 @@ footer {
     </div>
 </section>
 
-<section class="section">
-    <h2>Disclaimer</h2>
+<!-- BENEFITS -->
+<section id="benefits" class="section">
+    <h2>Benefits of Peptides</h2>
+
     <div class="card">
         <p>
-        All products are intended for research purposes only and are not for human consumption.
+        Peptides are short chains of amino acids that play a critical role in various biological functions. 
+        In research settings, peptides are widely studied for their potential to support cellular communication, 
+        tissue repair, and metabolic processes.
+        </p>
+
+        <p>
+        Scientists explore peptides for their involvement in muscle development, recovery mechanisms, 
+        and overall performance optimization. Certain peptides are also being studied for their possible 
+        effects on skin regeneration and anti-aging processes.
+        </p>
+
+        <p>
+        While research continues to evolve, peptides remain an important focus in modern science due to 
+        their targeted and efficient biological interactions.
+        </p>
+    </div>
+</section>
+
+<!-- SHIPPING -->
+<section id="shipping" class="section">
+    <h2>Shipping & Returns</h2>
+
+    <div class="card">
+        <p>
+        Sublime Peptide USA is committed to fast and reliable shipping. Orders are processed promptly 
+        and shipped with care to ensure product integrity.
+        </p>
+
+        <p>
+        Customers are encouraged to verify all shipping details before placing orders. Once shipped, 
+        tracking information may be provided when available.
+        </p>
+
+        <p>
+        Due to the nature of research products, all sales are typically final. However, in the event of 
+        damaged or incorrect items, customers should contact support for assistance.
+        </p>
+    </div>
+</section>
+
+<!-- PACKAGING -->
+<section id="packaging" class="section">
+    <h2>Packaging</h2>
+
+    <div class="card">
+        <p>
+        All products are packaged with precision and care to maintain stability and quality. 
+        Each vial is securely sealed and labeled for research identification.
+        </p>
+
+        <p>
+        Packaging is designed to protect contents during transit while maintaining a professional 
+        and discreet presentation.
+        </p>
+
+        <p>
+        Sublime Peptide USA prioritizes consistency and safety in every step of the packaging process.
         </p>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 Sublime Peptide USA</p>
+    <p>©️ 2026 Sublime Peptide USA</p>
 </footer>
 
 </body>
