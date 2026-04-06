@@ -2,716 +2,652 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Sublime Peptides USA | Premium Research Peptides</title>
-    <!-- Google Fonts + Font Awesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peptide Sciences | Professional Peptide Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
-
-        body {
-            background: #f5f9ff;
-            color: #0a2540;
-            scroll-behavior: smooth;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         :root {
-            --primary-blue: #0b63e5;
-            --dark-blue: #0a2540;
-            --light-blue: #eef4ff;
-            --pure-white: #ffffff;
-            --soft-gray: #f8fafc;
-            --border-light: #e2e8f0;
-            --text-dark: #1e293b;
-            --text-muted: #475569;
-            --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
-            --shadow-hover: 0 20px 30px -12px rgba(0, 0, 0, 0.12);
+            --primary: #1a5f7a;
+            --secondary: #57a6b8;
+            --accent: #ff7e5f;
+            --light: #f8f9fa;
+            --dark: #2c3e50;
+            --gray: #6c757d;
+        }
+
+        body {
+            color: #333;
+            line-height: 1.6;
+            background-color: #f9f9f9;
         }
 
         .container {
-            max-width: 1280px;
+            width: 100%;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 20px;
         }
 
-        section {
-            padding: 70px 0;
-        }
-
-        h2 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            color: var(--dark-blue);
-            letter-spacing: -0.02em;
-        }
-
-        .btn-primary {
-            background: var(--primary-blue);
-            color: white;
-            padding: 12px 32px;
-            border-radius: 40px;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            transition: all 0.25s ease;
-            display: inline-block;
-            font-size: 0.95rem;
-            text-decoration: none;
-        }
-
-        .btn-primary:hover {
-            background: #054bb4;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(11, 99, 229, 0.3);
-        }
-
-        .btn-outline {
-            background: transparent;
-            border: 1.5px solid var(--primary-blue);
-            color: var(--primary-blue);
-            padding: 10px 28px;
-            border-radius: 40px;
-            font-weight: 500;
-            transition: 0.2s;
-            cursor: pointer;
-            display: inline-block;
-        }
-
-        .btn-outline:hover {
-            background: var(--primary-blue);
-            color: white;
-        }
-
-        /* Navigation */
-        .navbar {
-            background: var(--pure-white);
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+        /* Header & Navigation */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
         }
 
-        .nav-container {
+        .header-container {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            flex-wrap: wrap;
-            padding: 1rem 24px;
-            max-width: 1400px;
-            margin: 0 auto;
+            align-items: center;
+            padding: 15px 0;
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
         }
 
-        .logo-img {
-            height: 48px;
-            width: auto;
+        .logo i {
+            color: var(--primary);
+            font-size: 28px;
         }
 
-        .logo-text {
-            font-size: 1.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #0b63e5, #0a2540);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
+        .logo h1 {
+            font-size: 24px;
+            color: var(--primary);
+            font-weight: 700;
         }
 
-        .nav-links {
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav ul {
             display: flex;
-            gap: 2rem;
-            align-items: center;
-            flex-wrap: wrap;
+            list-style: none;
+            gap: 30px;
         }
 
-        .nav-links a {
-            font-weight: 500;
-            transition: color 0.2s;
-            font-size: 0.95rem;
+        nav a {
             text-decoration: none;
-            color: var(--text-dark);
-        }
-
-        .nav-links a:hover, .nav-links a.active {
-            color: var(--primary-blue);
-        }
-
-        .cart-icon {
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s;
+            padding: 5px 0;
             position: relative;
-            font-size: 1.3rem;
-            cursor: pointer;
-            margin-left: 8px;
         }
 
-        .cart-count {
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        nav a.active {
+            color: var(--primary);
+        }
+
+        nav a.active::after {
+            content: '';
             position: absolute;
-            top: -8px;
-            right: -12px;
-            background: var(--primary-blue);
-            color: white;
-            border-radius: 30px;
-            font-size: 0.7rem;
-            padding: 2px 6px;
-            font-weight: bold;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary);
         }
 
         .mobile-menu-btn {
             display: none;
-            font-size: 1.6rem;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--primary);
             cursor: pointer;
         }
 
-        @media (max-width: 850px) {
-            .nav-links {
-                display: none;
-                width: 100%;
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 1rem 0;
-                gap: 1rem;
-            }
-            .nav-links.show {
-                display: flex;
-            }
-            .mobile-menu-btn {
-                display: block;
-            }
-        }
-
-        /* Hero */
+        /* Hero Section */
         .hero {
-            background: linear-gradient(120deg, #ffffff 0%, #eef4ff 100%);
-            border-radius: 0 0 2.5rem 2.5rem;
+            background: linear-gradient(rgba(26, 95, 122, 0.85), rgba(26, 95, 122, 0.9)), url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
         }
 
-        .hero-grid {
-            display: flex;
-            align-items: center;
-            gap: 3rem;
-            flex-wrap: wrap;
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            font-weight: 700;
         }
 
-        .hero-text {
-            flex: 1;
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
         }
 
-        .hero-text h1 {
-            font-size: 3.2rem;
-            line-height: 1.2;
-            margin-bottom: 1.2rem;
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
         }
 
-        .hero-text p {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            margin-bottom: 2rem;
+        .btn:hover {
+            background-color: #ff6b4a;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .hero-visual {
-            flex: 1;
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
         }
 
-        .image-grid {
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary);
+        }
+
+        /* Benefits Section */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--primary);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .benefits {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
 
-        .image-grid img {
-            width: 100%;
-            height: 170px;
-            object-fit: cover;
-            border-radius: 24px;
-            box-shadow: var(--shadow-sm);
+        .benefit-card {
+            background-color: var(--light);
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s;
         }
 
-        .image-grid img:hover {
-            transform: scale(1.02);
+        .benefit-card:hover {
+            transform: translateY(-10px);
         }
 
-        @media (max-width: 768px) {
-            .hero-grid { flex-direction: column; }
-            .hero-text h1 { font-size: 2.2rem; }
-        }
-
-        /* Featured Products */
-        .featured-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 2rem;
-            margin-top: 1rem;
-        }
-
-        .product-card {
-            background: white;
-            border-radius: 24px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border-light);
-            cursor: pointer;
-        }
-
-        .product-card:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .product-img {
-            width: 100%;
-            height: 220px;
-            background: linear-gradient(145deg, #f0f4fa, #ffffff);
+        .benefit-icon {
+            background-color: rgba(26, 95, 122, 0.1);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-            border-bottom: 1px solid #eef2f6;
+            margin-bottom: 20px;
         }
 
-        .product-logo-badge {
-            position: absolute;
-            bottom: 12px;
-            right: 12px;
-            background: rgba(10, 37, 64, 0.85);
-            backdrop-filter: blur(4px);
-            padding: 6px 12px;
-            border-radius: 40px;
-            font-size: 0.7rem;
-            font-weight: 700;
+        .benefit-icon i {
+            font-size: 30px;
+            color: var(--primary);
+        }
+
+        .benefit-card h3 {
+            font-size: 22px;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .benefit-card p {
+            color: var(--gray);
+        }
+
+        /* Catalog Section */
+        .catalog {
+            padding: 80px 0;
+            background-color: #f5f7fa;
+        }
+
+        .catalog-filters {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--primary);
             color: white;
+            border-color: var(--primary);
+        }
+
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-img {
+            height: 200px;
+            background-color: #e9ecef;
             display: flex;
             align-items: center;
-            gap: 6px;
-        }
-
-        .product-logo-badge i {
-            font-size: 0.8rem;
-        }
-
-        .product-img canvas {
-            width: 100px;
-            height: 100px;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 60px;
         }
 
         .product-info {
-            padding: 1.2rem;
+            padding: 25px;
         }
 
-        .product-title {
-            font-weight: 700;
-            font-size: 1rem;
+        .product-category {
+            display: inline-block;
+            background-color: rgba(87, 166, 184, 0.1);
+            color: var(--secondary);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .product-name {
+            font-size: 20px;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            color: var(--gray);
+            font-size: 14px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .product-price {
-            color: var(--primary-blue);
-            font-weight: 800;
-            margin: 8px 0;
-            font-size: 1.2rem;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary);
         }
 
-        .add-to-cart {
-            width: 100%;
-            background: var(--dark-blue);
+        .product-btn {
+            background-color: var(--secondary);
             color: white;
             border: none;
-            padding: 10px;
-            border-radius: 40px;
-            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 4px;
             cursor: pointer;
-            transition: all 0.2s;
-            margin-top: 8px;
+            font-weight: 600;
+            transition: background-color 0.3s;
         }
 
-        .add-to-cart:hover {
-            background: var(--primary-blue);
+        .product-btn:hover {
+            background-color: var(--primary);
         }
 
-        .shop-link {
-            text-align: center;
-            margin-top: 2.5rem;
+        /* Scientific Section */
+        .scientific {
+            padding: 80px 0;
+            background-color: white;
         }
 
-        /* Info Card */
-        .info-card {
-            background: var(--pure-white);
-            border-radius: 32px;
-            padding: 2rem;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border-light);
+        .scientific-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
         }
 
-        /* Cart Sidebar */
-        .cart-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
-            z-index: 200;
-            visibility: hidden;
-            opacity: 0;
-            transition: 0.2s;
+        .scientific-text {
+            flex: 1;
         }
 
-        .cart-sidebar {
-            position: fixed;
-            right: 0;
-            top: 0;
-            width: 400px;
-            max-width: 90vw;
-            background: white;
-            height: 100%;
-            z-index: 201;
-            padding: 1.5rem;
+        .scientific-text h3 {
+            font-size: 28px;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        .scientific-text p {
+            margin-bottom: 20px;
+            color: var(--gray);
+        }
+
+        .scientific-visual {
+            flex: 1;
+            background-color: #f0f7fa;
+            border-radius: 8px;
+            padding: 30px;
             display: flex;
             flex-direction: column;
-            transform: translateX(100%);
-            transition: transform 0.3s ease;
-            box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+            align-items: center;
+            justify-content: center;
         }
 
-        .cart-open .cart-overlay {
-            visibility: visible;
-            opacity: 1;
+        .molecule {
+            font-size: 100px;
+            color: var(--primary);
+            margin-bottom: 20px;
         }
 
-        .cart-open .cart-sidebar {
-            transform: translateX(0);
+        .scientific-visual p {
+            text-align: center;
+            color: var(--gray);
+            font-style: italic;
         }
 
         /* Footer */
         footer {
-            background: #0a2540;
-            color: #cbd5e1;
-            padding: 2.5rem 0;
-            margin-top: 2rem;
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
         }
 
         .footer-content {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
         }
 
-        .payment-icons i, .payment-icons span {
-            font-size: 2rem;
-            margin-right: 1rem;
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column a {
+            color: #b0b7c3;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
             color: white;
         }
 
-        /* Pages */
-        .page {
-            display: none;
+        .footer-column p {
+            color: #b0b7c3;
+            margin-bottom: 20px;
         }
 
-        .active-page {
-            display: block;
-        }
-
-        .policy-box {
-            background: white;
-            border-radius: 28px;
-            padding: 2rem;
-        }
-
-        .disclaimer {
-            background: #fef9e3;
-            padding: 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            margin-top: 1rem;
-        }
-
-        .contact-grid {
+        .social-icons {
             display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
         }
 
-        .contact-details, .contact-form {
-            flex: 1;
-            background: white;
-            border-radius: 28px;
-            padding: 2rem;
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: background-color 0.3s;
         }
 
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid var(--border-light);
-            border-radius: 20px;
-            margin-top: 6px;
-            margin-bottom: 1rem;
+        .social-icons a:hover {
+            background-color: var(--accent);
         }
 
-        @media (max-width: 640px) {
-            section { padding: 40px 0; }
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #b0b7c3;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .scientific-content {
+                flex-direction: column;
+            }
+            
+            .hero h2 {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .mobile-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                z-index: 100;
+            }
+            
+            .mobile-menu.active {
+                display: block;
+            }
+            
+            .mobile-menu ul {
+                list-style: none;
+            }
+            
+            .mobile-menu ul li {
+                margin-bottom: 15px;
+            }
+            
+            .mobile-menu a {
+                text-decoration: none;
+                color: var(--dark);
+                font-weight: 600;
+                font-size: 18px;
+                display: block;
+                padding: 10px 0;
+                border-bottom: 1px solid #eee;
+            }
+            
+            .hero h2 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding: 70px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 30px;
+            }
+            
+            .benefits, .catalog, .scientific {
+                padding: 60px 0;
+            }
         }
     </style>
 </head>
 <body>
-
-<div class="navbar">
-    <div class="nav-container">
-        <div class="logo">
-            <!-- Logo as image (data:image generated inline with Sublime Peptides USA branding) -->
-            <img id="mainLogo" class="logo-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Crect width='200' height='60' fill='%230b63e5' rx='12'/%3E%3Ctext x='20' y='38' font-family='Arial, sans-serif' font-weight='800' font-size='22' fill='white'%3ESUBLIME%3C/text%3E%3Ctext x='118' y='38' font-family='Arial' font-weight='700' font-size='18' fill='%23ffffff'%3EPEPTIDES%3C/text%3E%3Ctext x='20' y='54' font-family='Arial' font-size='10' fill='%23d9e6ff'%3EUSA%3C/text%3E%3C/svg%3E" alt="Sublime Peptides USA Logo">
-            <span class="logo-text">Sublime Peptides USA</span>
-        </div>
-        <div class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></div>
-        <div class="nav-links" id="navLinks">
-            <a href="#" data-page="home" class="nav-link active">Home</a>
-            <a href="#" data-page="shop" class="nav-link">Shop</a>
-            <a href="#" data-page="contact" class="nav-link">Contact</a>
-            <a href="#" data-page="shipping" class="nav-link">Shipping & Returns</a>
-            <a href="#" data-page="about-peptides" class="nav-link">About Peptides</a>
-            <div class="cart-icon" id="cartIcon">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="cart-count" id="cartCount">0</span>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-dna"></i>
+                <h1>Peptide<span>Sciences</span></h1>
             </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#catalog">Catalog</a></li>
+                    <li><a href="#scientific">Science</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
-    </div>
-</div>
-
-<main>
-    <!-- HOME PAGE -->
-    <div id="home-page" class="page active-page">
-        <div class="hero">
-            <div class="container">
-                <div class="hero-grid">
-                    <div class="hero-text">
-                        <h1>Precision Peptides <br>For Advanced Research</h1>
-                        <p>Trusted by top laboratories worldwide. Highest purity, rigorous quality control, and cutting-edge peptide synthesis for scientific discovery.</p>
-                        <a href="#" data-page="shop" class="btn-primary shop-redirect">Explore Catalog →</a>
-                    </div>
-                    <div class="hero-visual">
-                        <div class="image-grid">
-                            <img src="https://picsum.photos/id/152/400/300" alt="Research lab">
-                            <img src="https://picsum.photos/id/176/400/300" alt="Scientist">
-                            <img src="https://picsum.photos/id/20/400/300" alt="Microscope">
-                            <img src="https://picsum.photos/id/158/400/300" alt="Team research">
-                        </div>
-                    </div>
-                </div>
-            </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#catalog">Catalog</a></li>
+                <li><a href="#scientific">Science</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
+    </header>
 
+    <!-- Hero Section -->
+    <section class="hero" id="home">
         <div class="container">
-            <!-- FEATURED PRODUCTS SECTION -->
-            <section>
-                <h2>🔬 Featured Research Peptides</h2>
-                <div class="featured-grid" id="featuredProductsGrid"></div>
-                <div class="shop-link">
-                    <a href="#" data-page="shop" class="btn-outline shop-redirect">View All 55+ Products →</a>
-                </div>
-            </section>
-
-            <div class="info-card">
-                <h2>Understanding Peptides in Modern Science</h2>
-                <p>Peptides are short chains of amino acids that serve as fundamental building blocks in biological research. They act as signaling molecules, enabling scientists to investigate cellular mechanisms, receptor interactions, and therapeutic pathways. In laboratory settings, synthetic peptides are indispensable for studying protein function, drug development, and regenerative medicine. Their high specificity and low immunogenicity make them ideal candidates for groundbreaking discoveries.</p>
-                <p style="margin-top: 1rem;">At Sublime Peptides USA, we provide premium-grade peptides with ≥98% purity verified by HPLC and Mass Spectrometry. Each batch is meticulously tested to support reproducible, high-impact research across endocrinology, neurology, and metabolic science.</p>
-            </div>
+            <h2>Advanced Peptide Therapeutics</h2>
+            <p>Discover the power of peptides for enhanced recovery, anti-aging, and optimized cellular function. Backed by cutting-edge scientific research.</p>
+            <a href="#catalog" class="btn">View Catalog</a>
+            <a href="#benefits" class="btn btn-outline">Learn Benefits</a>
         </div>
-    </div>
+    </section>
 
-    <!-- SHOP PAGE -->
-    <div id="shop-page" class="page">
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
         <div class="container">
-            <h2>📋 Complete Peptides Catalog</h2>
-            <div class="featured-grid" id="productsGrid"></div>
-        </div>
-    </div>
-
-    <!-- CONTACT, SHIPPING, ABOUT PAGES (short versions) -->
-    <div id="contact-page" class="page">
-        <div class="container"><h2>Contact Us</h2>
-            <div class="contact-grid"><div class="contact-details"><i class="fas fa-envelope"></i><p><strong>Email:</strong> research@sublimepeptidesusa.com</p><i class="fas fa-phone-alt"></i><p><strong>Phone:</strong> +1 (888) 742-3547</p><i class="fas fa-map-marker-alt"></i><p><strong>Address:</strong> 4450 Innovation Way, San Diego, CA 92121</p></div>
-            <div class="contact-form"><h3>Send Inquiry</h3><form id="contactForm"><input type="text" placeholder="Name" id="contactName" required><input type="email" placeholder="Email" id="contactEmail" required><textarea rows="4" placeholder="Message"></textarea><button type="submit" class="btn-primary">Send</button><p id="formFeedback"></p></form></div></div></div>
-    </div>
-    <div id="shipping-page" class="page"><div class="container"><h2>Shipping & Returns</h2><div class="policy-box"><h3>📦 Processing: 1-3 business days</h3><p>Domestic: 3-7 days | International: 7-14 days</p><h3>Returns: 14 days unused/sealed</h3><div class="disclaimer"><strong>⚠️ Research Use Only:</strong> Products are for laboratory research purposes only. Not for human consumption.</div></div></div></div>
-    <div id="about-peptides-page" class="page"><div class="container"><h2>The Science of Peptides</h2><div class="policy-box"><p>Peptides have revolutionized biomedical research. From insulin discovery to modern therapeutic peptides, these molecules offer remarkable specificity. Evolution of solid-phase synthesis enables custom sequences for receptor mapping, drug targeting, and biomarker discovery. Their scientific importance continues to grow in fields like immunology, neuroscience, and regenerative medicine.</p></div></div></div>
-</main>
-
-<footer>
-    <div class="container footer-content">
-        <div><h4 style="color:white;">Sublime Peptides USA</h4><p style="font-size:0.8rem;">Research-grade excellence since 2020</p></div>
-        <div class="payment-icons"><h4>Payments</h4><i class="fab fa-apple-pay"></i> <i class="fab fa-google-pay"></i> <span>💳 Chime</span> <span>📱 Zelle</span></div>
-        <div class="footer-links"><h4>Quick Links</h4><a href="#" data-page="contact">Contact</a> <a href="#" data-page="shop">Shop</a> <a href="#" data-page="shipping">Shipping</a> <a href="#" data-page="about-peptides">About Peptides</a></div>
-    </div>
-    <div class="container" style="text-align:center; margin-top:2rem; font-size:0.75rem;">©️ 2025 Sublime Peptides USA — For Research Purposes Only</div>
-</footer>
-
-<!-- Cart Sidebar -->
-<div class="cart-overlay" id="cartOverlay"></div>
-<div class="cart-sidebar" id="cartSidebar"><div class="cart-header"><span>Your Cart</span><i class="fas fa-times" id="closeCart"></i></div><div class="cart-items" id="cartItemsList"></div><div class="cart-total" id="cartTotal"></div><button class="btn-primary" id="checkoutBtn">Proceed (Demo)</button></div>
-
-<script>
-    // ---------- PRODUCT DATABASE WITH LOGO-EMBEDDED IMAGES (Canvas generated each product shows Sublime Peptides USA logo) ----------
-    const peptideNames = ["Melanotan II", "TB-500", "BPC-157", "GHK-Cu", "Semax", "Selank", "Epitalon", "Thymosin Alpha-1", "AOD9604", "CJC-1295", "Ipamorelin", "GHRP-2", "GHRP-6", "Hexarelin", "Follistatin 344", "MOTS-C", "SS-31", "KPV", "LL-37", "PE-22-28", "DSIP", "PT-141", "Tesamorelin", "Sermorelin", "HGH Fragment", "IGF-1 LR3", "MGF", "PEG-MGF", "BPC/TB Blend", "Ara-290", "Oxytocin", "Cerebrolysin", "NAD+ Peptide", "Semaglutide Analog", "Tirzepatide", "Retatrutide", "VIP", "PACAP", "Amlexanox", "Kisspeptin", "Gonadorelin", "Methylcobalamin Peptide"];
-    
-    let products = [];
-    for (let i = 1; i <= 55; i++) {
-        let nameIdx = (i-1) % peptideNames.length;
-        let baseName = peptideNames[nameIdx] + (i > peptideNames.length ? `-${Math.floor((i-1)/peptideNames.length)+1}` : "");
-        let price = (29.99 + (i * 1.45) % 68).toFixed(2);
-        products.push({
-            id: i,
-            name: baseName,
-            price: parseFloat(price),
-        });
-    }
-
-    // Generate product image with Sublime Peptides USA logo (using canvas)
-    function generateProductImage(productName, width = 200, height = 200) {
-        const canvas = document.createElement('canvas');
-        canvas.width = width;
-        canvas.height = height;
-        const ctx = canvas.getContext('2d');
-        // Gradient background
-        const grad = ctx.createLinearGradient(0, 0, width, height);
-        grad.addColorStop(0, '#eef4ff');
-        grad.addColorStop(1, '#ffffff');
-        ctx.fillStyle = grad;
-        ctx.fillRect(0, 0, width, height);
-        // Draw peptide chain icon
-        ctx.fillStyle = '#0b63e5';
-        ctx.font = `bold ${width * 0.2}px "Inter"`;
-        ctx.fillText("🧬", width*0.35, height*0.45);
-        ctx.font = `500 ${width * 0.09}px "Inter"`;
-        ctx.fillStyle = '#0a2540';
-        ctx.fillText(productName.substring(0, 14), width*0.15, height*0.7);
-        // Sublime Peptides Logo Badge
-        ctx.fillStyle = '#0a2540cc';
-        ctx.fillRect(width-70, height-32, 65, 28);
-        ctx.fillStyle = 'white';
-        ctx.font = `bold ${width * 0.045}px "Inter"`;
-        ctx.fillText("⚡ SP USA", width-64, height-12);
-        ctx.fillStyle = '#0b63e5';
-        ctx.font = `bold ${width * 0.05}px "Inter"`;
-        ctx.fillText("PEPTIDE", width*0.65, height*0.88);
-        return canvas.toDataURL();
-    }
-
-    // Pre-store image URLs for each product (cached)
-    const productImages = {};
-    products.forEach(p => {
-        productImages[p.id] = generateProductImage(p.name, 280, 240);
-    });
-
-    // Cart logic
-    let cart = [];
-    function updateCartUI() {
-        const count = cart.reduce((s, i) => s + i.quantity, 0);
-        document.getElementById('cartCount').innerText = count;
-        const cartDiv = document.getElementById('cartItemsList');
-        if (!cartDiv) return;
-        if (cart.length === 0) { cartDiv.innerHTML = '<p>Cart is empty.</p>'; document.getElementById('cartTotal').innerHTML = 'Total: $0.00'; return; }
-        let html = '', total = 0;
-        cart.forEach(item => { total += item.price * item.quantity; html += `<div class="cart-item"><div><strong>${item.name}</strong><br>$${item.price.toFixed(2)} x ${item.quantity}</div><div>$${(item.price*item.quantity).toFixed(2)} <button class="remove-item" data-id="${item.id}" style="background:none;border:none;color:red;"><i class="fas fa-trash"></i></button></div></div>`; });
-        cartDiv.innerHTML = html;
-        document.getElementById('cartTotal').innerHTML = `Total: $${total.toFixed(2)}`;
-        document.querySelectorAll('.remove-item').forEach(btn => { btn.addEventListener('click', (e) => { const id = parseInt(btn.dataset.id); cart = cart.filter(i => i.id !== id); updateCartUI(); saveCart(); }); });
-        saveCart();
-    }
-    function addToCart(product) {
-        const existing = cart.find(i => i.id === product.id);
-        if (existing) existing.quantity++;
-        else cart.push({ ...product, quantity: 1 });
-        updateCartUI();
-        showToast("✓ Added to cart");
-    }
-    function showToast(msg) { let t = document.createElement('div'); t.innerText = msg; t.style.cssText = "position:fixed;bottom:20px;right:20px;background:#0b63e5;color:white;padding:10px 20px;border-radius:40px;z-index:999"; document.body.appendChild(t); setTimeout(()=>t.remove(),1500); }
-    function saveCart() { localStorage.setItem('sp_cart', JSON.stringify(cart)); }
-    function loadCart() { const saved = localStorage.getItem('sp_cart'); if(saved) { cart = JSON.parse(saved); updateCartUI(); } }
-
-    // Render shop & featured (both use same card style with generated images containing logo)
-    function renderProductGrid(containerId, productList, limit = null) {
-        const grid = document.getElementById(containerId);
-        if (!grid) return;
-        grid.innerHTML = '';
-        const items = limit ? productList.slice(0, limit) : productList;
-        items.forEach(prod => {
-            const card = document.createElement('div');
-            card.className = 'product-card';
-            card.innerHTML = `
-                <div class="product-img">
-                    <img src="${productImages[prod.id]}" style="width:100%; height:100%; object-fit:cover;" alt="${prod.name}">
-                    <div class="product-logo-badge"><i class="fas fa-certificate"></i> Sublime Peptides USA</div>
+            <div class="section-title">
+                <h2>Peptide Benefits</h2>
+                <p>Peptides offer targeted therapeutic benefits with high specificity and minimal side effects</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Enhanced Recovery</h3>
+                    <p>Peptides like BPC-157 and TB-500 accelerate tissue repair, reduce inflammation, and promote faster recovery from injuries and intense physical activity.</p>
                 </div>
-                <div class="product-info">
-                    <div class="product-title">${prod.name}</div>
-                    <div class="product-price">$${prod.price.toFixed(2)}</div>
-                    <button class="add-to-cart" data-id="${prod.id}">Add to Cart</button>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Cognitive Function</h3>
+                    <p>Nootropic peptides such as Semax and Selank improve memory, focus, and mental clarity while reducing anxiety and supporting neuroprotection.</p>
                 </div>
-            `;
-            grid.appendChild(card);
-        });
-        document.querySelectorAll(`#${containerId} .add-to-cart`).forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                const id = parseInt(btn.dataset.id);
-                const prod = products.find(p => p.id === id);
-                if (prod) addToCart(prod);
-            });
-        });
-        // Add click redirect to shop on product card (except button)
-        document.querySelectorAll(`#${containerId} .product-card`).forEach(card => {
-            card.addEventListener('click', (e) => {
-                if(e.target.classList.contains('add-to-cart')) return;
-                showPage('shop');
-            });
-        });
-    }
-
-    // Page routing
-    function showPage(pageId) {
-        document.querySelectorAll('.page').forEach(p => p.classList.remove('active-page'));
-        document.getElementById(`${pageId}-page`).classList.add('active-page');
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.classList.remove('active');
-            if(link.getAttribute('data-page') === pageId) link.classList.add('active');
-        });
-        if (pageId === 'shop') renderProductGrid('productsGrid', products);
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Cart UI toggles
-    document.getElementById('cartIcon').addEventListener('click', () => document.body.classList.add('cart-open'));
-    document.getElementById('cartOverlay').addEventListener('click', () => document.body.classList.remove('cart-open'));
-    document.getElementById('closeCart').addEventListener('click', () => document.body.classList.remove('cart-open'));
-    document.getElementById('checkoutBtn').addEventListener('click', () => { alert('Demo order placed. Research use only.'); document.body.classList.remove('cart-open'); });
-
-    // Navigation events
-    document.querySelectorAll('.nav-link, .shop-redirect, .footer-links a').forEach(el => {
-        if(el.getAttribute('data-page')) {
-            el.addEventListener('click', (e) => { e.preventDefault(); const pg = el.getAttribute('data-page'); if(pg) showPage(pg); if(document.getElementById('navLinks')) document.getElementById('navLinks').classList.remove('show'); });
-        }
-    });
-    document.getElementById('mobileMenuBtn').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('show'));
-    
-    // Contact form
-    const cf = document.getElementById('contactForm');
-    if(cf) cf.addEventListener('submit', (e) => { e.preventDefault(); document.getElementById('formFeedback').innerHTML = '<span style="color:green;">✔ Message received. We\'ll respond within 24h.</span>'; cf.reset(); setTimeout(()=>document.getElementById('formFeedback').innerHTML='',3000); });
-
-    // Initialize: load cart, render featured on homepage (first 6 products), full shop when needed
-    loadCart();
-    renderProductGrid('featuredProductsGrid', products, 6);
-    renderProductGrid('productsGrid', products);
-    showPage('home');
-</script>
-</body>
-</html>
-```
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-weight"></i>
+                    </div>
+                    <h3>Metabolic Optimization</h3>
+                    <p>Peptides like AOD-9604 and Tesamorelin promote fat loss, increase lean muscle mass, and improve metabolic parameters for better body composition.</p>
